@@ -1,9 +1,14 @@
-.form {
-    height: 789px;
-    width: 1121px;
-    border-radius: 20px;
-    background-color: #F6F6F6;
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
-
-    border: 1px solid red;
+.formulario {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
 }
+
+.formulario form {
+    max-width: 80%;
+    padding: 36px 64px;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+}
+
