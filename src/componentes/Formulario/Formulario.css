@@ -1,0 +1,9 @@
+.form {
+    height: 789px;
+    width: 1121px;
+    border-radius: 20px;
+    background-color: #F6F6F6;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid red;
+}
