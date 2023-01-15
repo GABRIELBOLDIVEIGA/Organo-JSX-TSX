@@ -52,7 +52,7 @@ function App() {
     ];
 
     return (
-        <div>
+        <>
             <Banner />
             
             <Formulario 
@@ -73,8 +73,7 @@ function App() {
             ))}
 
             <Rodape />
-            
-        </div>
+        </>
     );
 }
 
