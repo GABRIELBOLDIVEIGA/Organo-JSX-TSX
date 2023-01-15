@@ -1,0 +1,43 @@
+.footer {
+    background: #6278f7;
+    color: #fff;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.tipo-img {
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+}
+
+#fb {
+    background-image: url("../../imagens/imagens/fb.png");
+}
+
+#tw {
+    background-image: url("../../imagens/imagens/tw.png");
+}
+
+#ig {
+    background-image: url("../../imagens/imagens/ig.png");
+}
+
+#logo-rodape {
+    width: 270px;
+    height: 60px;
+    background-image: url("../../imagens/imagens/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}

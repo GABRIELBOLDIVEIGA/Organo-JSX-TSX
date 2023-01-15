@@ -48,8 +48,6 @@ export default function Formulario(props) {
     const [imagem, setImagem] = useState("");
     const [time, setTime] = useState("");
 
-    const times = ["Programação", "Front-End", "Data Science", "Devops", "UX e Design", "Mobile", "Inovação e Gestão"];
-
     const aoSalvar = (evento) => {
         evento.preventDefault();
         props.aoColaboradoresCadastrado({
@@ -59,6 +57,10 @@ export default function Formulario(props) {
             time
         })
         evento.target.reset();
+        setNome("");
+        setCargo("");
+        setImagem("-");
+        setTime("");
     }
 
     return (
@@ -74,27 +76,30 @@ export default function Formulario(props) {
                     placeholder="Digite seu nome" 
                     valor={nome}
                     aoAlterado={valor => {setNome(valor)}}
-                    />
+                />
+
                 <CampoTexto 
                     required={true} 
                     label="Cargo"
                     placeholder="Digite seu cargo" 
                     valor={cargo}
                     aoAlterado={valor => {setCargo(valor)}}
-                    />
+                />
+
                 <CampoTexto 
-                    label="Imagem" 
+                    label="URL da Imagem" 
                     placeholder="Informe o endereço da imagem" 
                     valor={imagem}
                     aoAlterado={valor => {setImagem(valor)}}
-                    />
+                />
+
                 <ListaSuspensa 
                     required={true} 
-                    itens={times} 
+                    itens={props.times} 
                     label="Time" 
                     valor={time}
                     aoAlterado={valor => {setTime(valor)}}
-                    />
+                />
 
                 <Botao>Cria Card</Botao>
             </form>

@@ -1,14 +1,16 @@
 import "./Card.css";
 
-export default function Card(props) {
+export default function Card({nome, cargo, imagem: imagemURL, corDoTime}) {
+    // console.log(props);
+
     return (
         <div className="card">
-            <div className="fundo"></div>
+            <div className="fundo" style={corDoTime}></div>
             <div className="conteudo">
-                <img src="/imagens/colaborador/colaborador1.png" alt="" />
+                <img src={imagemURL.includes(".png") ? imagemURL : `${imagemURL}.png`} alt="" />
                 <div className="textos">
-                    <h4 >Juliana Amoasei</h4>
-                    <p >Desenvolvedora de software e instrutora</p>
+                    <h4>{nome}</h4>
+                    <p>{cargo}</p>
                 </div>
             </div>
         </div>
