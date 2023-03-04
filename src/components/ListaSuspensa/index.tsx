@@ -1,0 +1,32 @@
+import "./lista-suspensa.css";
+import React from "react";
+
+interface ListaSuspensaProps {
+    label: string;
+    items: string[];
+    valor: string;
+    // aoAlterado: React.ChangeEventHandler<HTMLSelectElement>;
+    aoAlterado: (x: string) => void;
+    obrigatorio: boolean;
+}
+
+const ListaSuspensa = ({ label, items, valor, aoAlterado, obrigatorio = false }: ListaSuspensaProps) => {
+    return (
+        <div className="lista-suspensa">
+            <label>{label}</label>
+            <select 
+                required={obrigatorio} 
+                value={valor} 
+                // onChange={aoAlterado}
+                onChange={(evento) => aoAlterado(evento.target.value)}
+            >
+                <option />
+                {items.map((item) => (
+                    <option key={item}>{item}</option>
+                ))}
+            </select>
+        </div>
+    );
+};
+
+export default ListaSuspensa;
